@@ -11,7 +11,7 @@ namespace COMP2007_Lab4_S2016.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Department()
         {
-            Courses = new HashSet<Cours>();
+            Courses = new HashSet<Course>();
         }
 
         public int DepartmentID { get; set; }
@@ -23,6 +23,6 @@ namespace COMP2007_Lab4_S2016.Models
         public decimal Budget { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cours> Courses { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
     }
 }

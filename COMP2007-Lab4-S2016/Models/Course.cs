@@ -7,10 +7,10 @@ namespace COMP2007_Lab4_S2016.Models
     using System.Data.Entity.Spatial;
 
     [Table("Courses")]
-    public partial class Cours
+    public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cours()
+        public Course()
         {
             Enrollments = new HashSet<Enrollment>();
         }

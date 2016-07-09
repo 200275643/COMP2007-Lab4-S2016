@@ -16,7 +16,7 @@ namespace COMP2007_Lab4_S2016.Models
 
         public int Grade { get; set; }
 
-        public virtual Cours Cours { get; set; }
+        public virtual Course Cours { get; set; }
 
         public virtual Student Student { get; set; }
     }

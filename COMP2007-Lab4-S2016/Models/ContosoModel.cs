@@ -12,18 +12,18 @@ namespace COMP2007_Lab4_S2016.Models
         {
         }
 
-        public virtual DbSet<Cours> Courses { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Enrollment> Enrollments { get; set; }
         public virtual DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Cours>()
+            modelBuilder.Entity<Course>()
                 .Property(e => e.Title)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Cours>()
+            modelBuilder.Entity<Course>()
                 .HasMany(e => e.Enrollments)
                 .WithRequired(e => e.Cours)
                 .WillCascadeOnDelete(false);
